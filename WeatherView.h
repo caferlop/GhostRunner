@@ -1,5 +1,5 @@
 //
-//  TableViewStoryViewController.h
+//  WeatherView.h
 //  GhostRunner
 //
 //  Created by Carlos Fernández López on 18/04/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewStoryViewController : UIViewController
+@interface WeatherView : UIView
 
 @end
