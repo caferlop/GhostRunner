@@ -24,6 +24,8 @@
 		05F55ACA19015B6F001E01FA /* TrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F55AC919015B6F001E01FA /* TrackViewController.m */; };
 		05F55ACD19015BA5001E01FA /* WeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F55ACC19015BA5001E01FA /* WeatherView.m */; };
 		05F55AD61901BE5F001E01FA /* OpenWeatherDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F55AD51901BE5F001E01FA /* OpenWeatherDataModel.m */; };
+		05F55ADA1901CA4D001E01FA /* LocationDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F55AD91901CA4D001E01FA /* LocationDataModel.m */; };
+		05F55ADC1901D610001E01FA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F55ADB1901D610001E01FA /* CoreLocation.framework */; };
 		3F5836237760478CB7D533DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1564074391740C4A8C037BC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,9 @@
 		05F55ACC19015BA5001E01FA /* WeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherView.m; sourceTree = "<group>"; };
 		05F55AD41901BE5F001E01FA /* OpenWeatherDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenWeatherDataModel.h; sourceTree = "<group>"; };
 		05F55AD51901BE5F001E01FA /* OpenWeatherDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenWeatherDataModel.m; sourceTree = "<group>"; };
+		05F55AD81901CA4D001E01FA /* LocationDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDataModel.h; sourceTree = "<group>"; };
+		05F55AD91901CA4D001E01FA /* LocationDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDataModel.m; sourceTree = "<group>"; };
+		05F55ADB1901D610001E01FA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A1E520FCD8C64FC6B059BD82 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		B1564074391740C4A8C037BC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05F55ADC1901D610001E01FA /* CoreLocation.framework in Frameworks */,
 				05F55A86190134FD001E01FA /* MapKit.framework in Frameworks */,
 				05F55A53190133FF001E01FA /* CoreGraphics.framework in Frameworks */,
 				05F55A55190133FF001E01FA /* UIKit.framework in Frameworks */,
@@ -95,6 +101,8 @@
 		05F55A44190133FF001E01FA = {
 			isa = PBXGroup;
 			children = (
+				05F55AD81901CA4D001E01FA /* LocationDataModel.h */,
+				05F55AD91901CA4D001E01FA /* LocationDataModel.m */,
 				05F55AD41901BE5F001E01FA /* OpenWeatherDataModel.h */,
 				05F55AD51901BE5F001E01FA /* OpenWeatherDataModel.m */,
 				05F55AC819015B6F001E01FA /* TrackViewController.h */,
@@ -121,6 +129,7 @@
 		05F55A4F190133FF001E01FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05F55ADB1901D610001E01FA /* CoreLocation.framework */,
 				05F55A85190134FD001E01FA /* MapKit.framework */,
 				05F55A50190133FF001E01FA /* Foundation.framework */,
 				05F55A52190133FF001E01FA /* CoreGraphics.framework */,
@@ -309,6 +318,7 @@
 				05F55A5D190133FF001E01FA /* main.m in Sources */,
 				05F55ACA19015B6F001E01FA /* TrackViewController.m in Sources */,
 				05F55ACD19015BA5001E01FA /* WeatherView.m in Sources */,
+				05F55ADA1901CA4D001E01FA /* LocationDataModel.m in Sources */,
 				05F55AD61901BE5F001E01FA /* OpenWeatherDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

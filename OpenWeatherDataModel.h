@@ -10,4 +10,9 @@
 
 @interface OpenWeatherDataModel : NSObject
 
+@property (nonatomic) CGFloat tempCurrent;
+@property (nonatomic) NSInteger  cloudCover;
+
+-(void)getCurrent:(NSString*)Jquery;
+
 @end
