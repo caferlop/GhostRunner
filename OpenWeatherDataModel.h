@@ -13,6 +13,6 @@
 @property (nonatomic) CGFloat tempCurrent;
 @property (nonatomic) NSInteger  cloudCover;
 
--(void)getCurrent:(NSString*)Jquery;
+-(void)getCurrent:(CLLocation*)Location;
 
 @end

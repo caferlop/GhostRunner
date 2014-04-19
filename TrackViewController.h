@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TrackViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *Temperature;
+@property (weak, nonatomic) IBOutlet UITextField *Location;
 
 @end

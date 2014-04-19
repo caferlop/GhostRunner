@@ -24,12 +24,12 @@
     return self;
 }
 
--(void)getCurrent:(NSString *)Jquery
+-(void)getCurrent:(CLLocation*)Location
 {
-    NSString *const urlstring = @"http://api.openweathermap.org/data/2.5/weather ";
+    NSString *const urlstring = @"http://api.openweathermap.org/data/2.5/weather";
     
-    NSString *weatherURLText = [NSString stringWithFormat:@"%@?q=%@",
-                                urlstring, Jquery];
+    NSString *weatherURLText = [NSString stringWithFormat:@"%@?lat=%i&lon=%i",urlstring,(int)Location.coordinate.latitude,(int)Location.coordinate.longitude];
+    NSLog(@"%@",weatherURLText);
     NSURL *weatherURL = [NSURL URLWithString:weatherURLText];
     NSURLRequest *weatherRequest = [NSURLRequest requestWithURL:weatherURL];
     
@@ -40,7 +40,9 @@
         weatherResponse =(NSDictionary*)responseObject;
         [self parseWeatherService];
         NSLog(@"JSON: %@", responseObject);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }
+    failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // Handle error
         weatherResponse=@{};
         UIAlertView * ErrorAlerView = [[UIAlertView alloc]initWithTitle:@"Error Getting Data" message:@"Error getting data from weather Api" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
@@ -53,7 +55,16 @@
 {
     
     self.cloudCover = [weatherResponse[@"clouds"][@"all"]integerValue];
+    self.tempCurrent = [self kelvinToCelsius:[weatherResponse[@"main"][@"temp"]doubleValue]];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"JSONReceived" object:self userInfo:@{@"temperature":[NSString stringWithFormat:@"%f",self.tempCurrent]}];
+    NSLog(@"Porcentaje Nubosidad:%i",self.cloudCover);
+    NSLog(@"Temperatura:%f",self.tempCurrent);
     
+}
+-(double)kelvinToCelsius:(double)degreesKelvin
+{
+    const double ZERO_CELSIUS_IN_KELVIN =273.15;
+    return degreesKelvin - ZERO_CELSIUS_IN_KELVIN;
 }
 
 @end

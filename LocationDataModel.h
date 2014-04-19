@@ -12,11 +12,13 @@
 
 @property (nonatomic,strong) NSMutableArray * arrayOfCoordinates;
 @property (nonatomic,strong) CLLocation * Coordinates;
-@property (nonatomic,strong) NSString * City;
+@property (nonatomic,strong) NSString*Locality;
+@property (nonatomic) CGFloat temperature;
+
 
 -(void)startLocationManager;
 -(void)startUpdatingLocation;
 -(void)stopUpdatingLocation;
--(NSString*)stringFromPlaceMark:(CLPlacemark*)thePlacemark;
+-(NSString*)locality;
 
 @end
