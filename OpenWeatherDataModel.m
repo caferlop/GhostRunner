@@ -56,8 +56,8 @@
     
     self.cloudCover = [weatherResponse[@"clouds"][@"all"]integerValue];
     self.tempCurrent = [self kelvinToCelsius:[weatherResponse[@"main"][@"temp"]doubleValue]];
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"JSONReceived" object:self userInfo:@{@"temperature":[NSString stringWithFormat:@"%f",self.tempCurrent]}];
-    NSLog(@"Porcentaje Nubosidad:%i",self.cloudCover);
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"JSONReceived" object:self userInfo:@{@"temperature":[NSString stringWithFormat:@"%iºC",(int)self.tempCurrent]}];
+    NSLog(@"Porcentaje Nubosidad:%d",self.cloudCover);
     NSLog(@"Temperatura:%f",self.tempCurrent);
     
 }

@@ -10,4 +10,7 @@
 
 @interface WeatherView : UIView
 
+@property (nonatomic,strong) WeatherView*view;
+
+
 @end

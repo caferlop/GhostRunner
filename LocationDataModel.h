@@ -22,3 +22,4 @@
 -(NSString*)locality;
 
 @end
+ 

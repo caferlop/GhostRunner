@@ -10,8 +10,6 @@
 #import "LocationDataModel.h"
 
 
-
-
 @interface TrackViewController ()
 
 @end
@@ -26,6 +24,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        NSLog(@"log");
         // Custom initialization
         //[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(fillLabels:) name:@"JSONReceived" object:nil];
     }
@@ -35,14 +34,19 @@
 {
     
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(fillTemperatureLabel:) name:@"JSONReceived" object:nil];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(fillLocationLabel:) name:@"ReverseGeocodingperformed" object:nil];
-    //Location = [[LocationDataModel alloc]init];
-    //self.Temperature.text = [NSString stringWithFormat:@"%f Cº",Location.temperature];
-    //self.Location.text = Location.locality;
+    NSLog(@"log");
     
-	// Do any additional setup after loading the view.
+    Location = [[LocationDataModel alloc]init];
+    
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(fillTemperatureLabel:) name:@"JSONReceived" object:nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(fillLocationLabel:) name:@"ReverseGeocodingperformed" object:nil];
+  
 }
+//------------------------------------------------
+#pragma mark NSNotification Methods.
+//------------------------------------------------
 -(void)fillTemperatureLabel:(NSNotification*)notification
 {
     self.Temperature.text=notification.userInfo[@"temperature"];
@@ -53,6 +57,7 @@
 {
     
     self.Location.text=notification.userInfo[@"locality"];
+    
     NSLog(@"Notification  location received");
 }
 
@@ -62,5 +67,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//------------------------------------------------
+#pragma mark Action Buttons.
+//------------------------------------------------
+- (IBAction)Play:(id)sender {
+}
 
+- (IBAction)Pause:(id)sender {
+}
+
+- (IBAction)Stop:(id)sender {
+}
+
+- (IBAction)Options:(id)sender {
+}
 @end
+

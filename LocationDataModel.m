@@ -47,6 +47,7 @@
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
         [self startUpdatingLocation];
         [self performSelector:@selector(didTimeOut:) withObject:nil afterDelay:60];
+        [self performSelector:@selector(performingReverseGeocodingAgain) withObject:nil afterDelay:3600];
         
     }
 }
@@ -86,6 +87,14 @@
         lastLocationError = [NSError errorWithDomain:@"LocationError" code:1 userInfo:nil];
     }
     
+}
+//------------------------------------------------------------------------------------//
+#pragma  Updating Location and Weather
+//------------------------------------------------------------------------------------//
+-(void)performingReverseGeocodingAgain
+{
+    performingReverseGeocoding=YES;
+    NSLog(@"perform");
 }
 //------------------------------------------------------------------------------------//
 #pragma  Getting String from Placemark
@@ -149,7 +158,7 @@
             
             performingReverseGeocoding = YES;
             [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
-                //NSLog(@"*** Found placemarks: %@, error: %@", placemarks, error);
+                NSLog(@"*** Found placemarks: %@, error: %@", placemarks, error);
                 
                 lastGeocodingError = error;
                 if (error == nil && [placemarks count] > 0)
@@ -162,9 +171,8 @@
                     self.locality = [self locality];
                     self.temperature = Weather.tempCurrent;
                     //With the NSNotificationcenter, will notify to the view Controller when to perform the method that will give value to the textfield properties of the Trackviewcontroller
-                    [[NSNotificationCenter defaultCenter]postNotificationName:@"ReverseGeocodingperformed" object:self userInfo:@{@"locality":self.locality}];
+                   [[NSNotificationCenter defaultCenter]postNotificationName:@"ReverseGeocodingperformed" object:self userInfo:@{@"locality":self.locality}];
                                                                                                                      
-                    
                     NSLog(@"%@",[self locality]);
                 } else {
                     placemark = nil;
@@ -185,8 +193,8 @@
 
     [self.arrayOfCoordinates addObject:newLocation];
    
-    
-    
+
 }
 
 @end
+ 
