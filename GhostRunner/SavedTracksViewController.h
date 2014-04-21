@@ -12,5 +12,7 @@
 
 @property (nonatomic,strong) NSArray * matchingobjects;
 @property (nonatomic,strong) UITableView * tableView;
+- (IBAction)BackNavigationButton:(id)sender;
+- (IBAction)LoadTrackButton:(id)sender;
 
 @end

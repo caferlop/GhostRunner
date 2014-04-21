@@ -102,10 +102,14 @@
     
     return cell;
 }
--(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
-{
-    [self performSegueWithIdentifier:@"BackToMapVIew" sender:nil];
-    NSLog(@"Accessory tapped");
+
+
+- (IBAction)BackNavigationButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)LoadTrackButton:(id)sender {
+    [self performSegueWithIdentifier:@"BackToMapView" sender:nil];
 }
 /*
 // Override to support conditional editing of the table view.
@@ -157,5 +161,6 @@
 }
 
  */
+
 
 @end

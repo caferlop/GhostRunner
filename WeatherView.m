@@ -45,8 +45,8 @@
 
     //Drawing clouds with round corners and moving them. Adding a subview for the cloud with an image, and using layers properties of quarzt core to round it.
     //Way 1
-    UIImage * cloud = [UIImage imageNamed:@"Cloud1.png"];
-    [cloud drawAtPoint:CGPointMake(self.center.x-(cloud.size.width)/2, self.center.y-cloud.size.height/4)];
+   // UIImage * cloud = [UIImage imageNamed:@"Cloud1.png"];
+   // [cloud drawAtPoint:CGPointMake(self.center.x-(cloud.size.width)/2, self.center.y-cloud.size.height/4)];
     
     //Way 2. It crahs in Imagelayer.contents...
     /*
