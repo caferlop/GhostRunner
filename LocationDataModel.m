@@ -132,6 +132,7 @@
     {
         return;
     }
+     [self.arrayOfCoordinates addObject:newLocation];
     //Performin reversegeocoding, to get the locality from the coordinates. The locality will be passed as a string to the openweatherdatamodel to perform the request to the web service.
     CLLocationDistance distance = MAXFLOAT;
     if (location != nil) {
@@ -191,7 +192,7 @@
                     }
     }
 
-    [self.arrayOfCoordinates addObject:newLocation];
+   
    
 
 }

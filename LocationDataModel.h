@@ -16,10 +16,5 @@
 @property (nonatomic) CGFloat temperature;
 
 
--(void)startLocationManager;
--(void)startUpdatingLocation;
--(void)stopUpdatingLocation;
--(NSString*)locality;
-
 @end
  

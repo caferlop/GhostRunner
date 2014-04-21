@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "WeatherView.h"
+#import <MapKit/MapKit.h>
 
-@interface TrackViewController : UIViewController
+@interface TrackViewController : UIViewController<MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *Temperature;
 @property (weak, nonatomic) IBOutlet UITextField *Location;
 @property (strong, nonatomic) IBOutlet WeatherView *weatherWidget;
+@property (strong, nonatomic) IBOutlet MKMapView *MapView;
+
 
 - (IBAction)Play:(id)sender;
 - (IBAction)Pause:(id)sender;
