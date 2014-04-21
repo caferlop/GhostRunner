@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SavedTracksViewController : UITableViewController
+@interface SavedTracksViewController : UITableViewController <UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic,strong) NSArray * matchingobjects;
+@property (nonatomic,strong) UITableView * tableView;
 
 @end

@@ -17,6 +17,7 @@
 		05DEC4CC1904FBF600BC7E9B /* coreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05DEC4CA1904FBF600BC7E9B /* coreData.xcdatamodeld */; };
 		05DEC4CF1905137200BC7E9B /* SavedTracksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DEC4CE1905137200BC7E9B /* SavedTracksViewController.m */; };
 		05DEC4D1190549B000BC7E9B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DEC4D0190549B000BC7E9B /* CoreData.framework */; };
+		05DEC4D419056C9100BC7E9B /* CellViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DEC4D319056C9100BC7E9B /* CellViewCell.m */; };
 		05E7304419031DF10091D382 /* Cloud3.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E7304119031DF10091D382 /* Cloud3.png */; };
 		05E7304519031DF10091D382 /* Cloud2.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E7304219031DF10091D382 /* Cloud2.png */; };
 		05E7304619031DF10091D382 /* Cloud1.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E7304319031DF10091D382 /* Cloud1.png */; };
@@ -65,6 +66,8 @@
 		05DEC4CD1905137200BC7E9B /* SavedTracksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavedTracksViewController.h; path = GhostRunner/SavedTracksViewController.h; sourceTree = "<group>"; };
 		05DEC4CE1905137200BC7E9B /* SavedTracksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SavedTracksViewController.m; path = GhostRunner/SavedTracksViewController.m; sourceTree = "<group>"; };
 		05DEC4D0190549B000BC7E9B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		05DEC4D219056C9100BC7E9B /* CellViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellViewCell.h; path = GhostRunner/CellViewCell.h; sourceTree = "<group>"; };
+		05DEC4D319056C9100BC7E9B /* CellViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellViewCell.m; path = GhostRunner/CellViewCell.m; sourceTree = "<group>"; };
 		05E7304119031DF10091D382 /* Cloud3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cloud3.png; path = "../../Archer Fish/SpriteSheetsItems/Clouds/Cloud3.png"; sourceTree = "<group>"; };
 		05E7304219031DF10091D382 /* Cloud2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cloud2.png; path = "../../Archer Fish/SpriteSheetsItems/Clouds/Cloud2.png"; sourceTree = "<group>"; };
 		05E7304319031DF10091D382 /* Cloud1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cloud1.png; path = "../../Archer Fish/SpriteSheetsItems/Clouds/Cloud1.png"; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				05F55ACC19015BA5001E01FA /* WeatherView.m */,
 				05DEC4CD1905137200BC7E9B /* SavedTracksViewController.h */,
 				05DEC4CE1905137200BC7E9B /* SavedTracksViewController.m */,
+				05DEC4D219056C9100BC7E9B /* CellViewCell.h */,
+				05DEC4D319056C9100BC7E9B /* CellViewCell.m */,
 				05DEC4CA1904FBF600BC7E9B /* coreData.xcdatamodeld */,
 				05F55A56190133FF001E01FA /* GhostRunner */,
 				05F55A7519013400001E01FA /* GhostRunnerTests */,
@@ -373,6 +378,7 @@
 				05F55A5D190133FF001E01FA /* main.m in Sources */,
 				05F55ACA19015B6F001E01FA /* TrackViewController.m in Sources */,
 				05F55ACD19015BA5001E01FA /* WeatherView.m in Sources */,
+				05DEC4D419056C9100BC7E9B /* CellViewCell.m in Sources */,
 				05F55ADA1901CA4D001E01FA /* LocationDataModel.m in Sources */,
 				05F55AD61901BE5F001E01FA /* OpenWeatherDataModel.m in Sources */,
 				058DC7B71904716C009DB97C /* DetailViewController.m in Sources */,

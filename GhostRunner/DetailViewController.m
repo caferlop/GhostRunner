@@ -49,6 +49,7 @@
     
     self.DateLabel.text = selectionString;
     
+    [self contextAndObjectModelCreation];
     
     
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
