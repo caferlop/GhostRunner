@@ -56,6 +56,11 @@
     
     
 }
+
+- (IBAction)BackButton:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 //-------------------------------------------------------------------
 #pragma mark Performing Core Data Context and Object Creation
 //-------------------------------------------------------------------

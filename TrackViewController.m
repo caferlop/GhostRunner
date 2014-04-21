@@ -73,6 +73,7 @@
 //------------------------------------------------
 #pragma mark Action Buttons.
 //------------------------------------------------
+
 - (IBAction)Play:(id)sender {
     PauseTimer=NO;
     if(PauseTimer==NO)
@@ -96,6 +97,12 @@
     
    
 }
+- (IBAction)Options:(id)sender {
+    
+    [self performSegueWithIdentifier:@"SavedTracksSegue" sender:self];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
 //------------------------------------------------------------------------------------------//
 #pragma mark Delegate method of UIAlerview
 //Implemented in stop button
@@ -114,11 +121,7 @@
         //[self presentingViewController];
     }
 }
-- (IBAction)Options:(id)sender {
-    
-    [self performSegueWithIdentifier:@"SavedTracksSegue" sender:self];
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-}
+
 //------------------------------------------------------------------------------------------//
 #pragma mark Prepare for segue method delegate
 

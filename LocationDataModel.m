@@ -68,7 +68,7 @@
 }
 //----------------------------------------------------------------------
 #pragma mark Init stopUpdatingLocation
-// if the location services are enabled, startUpdating location, and assing yes to the bool variable.
+// stop updating location
 //----------------------------------------------------------------------
 -(void)stopUpdatingLocation
 {
@@ -91,7 +91,7 @@
     
 }
 //------------------------------------------------------------------------------------//
-#pragma  Updating Location and Weather
+#pragma  performingReverseGeocoding
 //------------------------------------------------------------------------------------//
 -(void)performingReverseGeocodingAgain
 {
@@ -100,6 +100,7 @@
 }
 //------------------------------------------------------------------------------------//
 #pragma  Getting String from Placemark
+// With this two methods and the reverse geocoding process, get from the coordinates the name of the locality and country.
 //------------------------------------------------------------------------------------//
 -(NSString*)stringFromPlaceMark:(CLPlacemark*)thePlacemark
 {
@@ -111,6 +112,7 @@
 }
 //------------------------------------------------------------------------------------//
 #pragma  mark CLLocationManagerDelegate
+// Delegate methos of CLLocation that will take care to keep updated the location
 //------------------------------------------------------------------------------------//
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
@@ -124,7 +126,7 @@
 }
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    
+    //getting the last location once the accurazy is good enought.
     CLLocation * newLocation = locations.lastObject;
     if([newLocation.timestamp timeIntervalSinceNow]<-5.0)
     {
@@ -135,6 +137,8 @@
         return;
     }
      [self.arrayOfCoordinates addObject:newLocation];
+    
+    
     //Performin reversegeocoding, to get the locality from the coordinates. The locality will be passed as a string to the openweatherdatamodel to perform the request to the web service.
     CLLocationDistance distance = MAXFLOAT;
     if (location != nil) {
@@ -167,6 +171,8 @@
                 if (error == nil && [placemarks count] > 0)
                 {
                     placemark = [placemarks lastObject];
+                    
+                    //Once we´ve got the placemark, instantiate OpenWeatherDataModel class and perform a JSON request, passing a location value, that gots our coordinates.
                     
                     Weather = [[OpenWeatherDataModel alloc]init];
                     [Weather getCurrent:location];

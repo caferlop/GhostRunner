@@ -66,8 +66,9 @@
     self.matchingobjects = [context executeFetchRequest:request error:&error];
     
 }
+//-------------------------------------------------------------------
 #pragma mark - Table view data source
-
+//-------------------------------------------------------------------
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 
@@ -107,9 +108,14 @@
 - (IBAction)BackNavigationButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+//-------------------------------------------------------------------
+#pragma mark - The load track button 
+//(Pending of implementation)The loadTrackButton will pass the track array object through the segue, so trackviewcontroller can trace the track in the view
+//-------------------------------------------------------------------
 
 - (IBAction)LoadTrackButton:(id)sender {
     [self performSegueWithIdentifier:@"BackToMapView" sender:nil];
+    [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
 }
 /*
 // Override to support conditional editing of the table view.
@@ -150,17 +156,17 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
-// In a story board-based application, you will often want to do a little preparation before navigation
+ //In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
 
- */
+
 
 
 @end
