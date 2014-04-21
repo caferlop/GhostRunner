@@ -58,7 +58,18 @@
 //-------------------------------------------------------------------
 #pragma mark Performing Core Data Context and Object Creation
 //-------------------------------------------------------------------
-
+-(void)contextAndObjectModelCreation
+{
+    TableViewStoryAppDelegate * Delegate = [[UIApplication sharedApplication]delegate];
+    
+    NSManagedObjectContext * context = [Delegate managedObjectContext];
+    
+    NSManagedObject * newTrack = [NSEntityDescription insertNewObjectForEntityForName:@"Track" inManagedObjectContext:context];
+    
+    [newTrack setValue:self.Name.text forKey:@"name"];
+    [newTrack setValue:self.Location.text forKey:@"location"];
+    [newTrack setValue:self.DateLabel.text forKey:@"date"];
+}
 //-------------------------------------------------------------------
 #pragma mark UITextfield delegate method
 //-------------------------------------------------------------------

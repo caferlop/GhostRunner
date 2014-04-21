@@ -16,6 +16,7 @@
 		058DC7B71904716C009DB97C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 058DC7B61904716C009DB97C /* DetailViewController.m */; };
 		05DEC4CC1904FBF600BC7E9B /* coreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05DEC4CA1904FBF600BC7E9B /* coreData.xcdatamodeld */; };
 		05DEC4CF1905137200BC7E9B /* SavedTracksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DEC4CE1905137200BC7E9B /* SavedTracksViewController.m */; };
+		05DEC4D1190549B000BC7E9B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DEC4D0190549B000BC7E9B /* CoreData.framework */; };
 		05E7304419031DF10091D382 /* Cloud3.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E7304119031DF10091D382 /* Cloud3.png */; };
 		05E7304519031DF10091D382 /* Cloud2.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E7304219031DF10091D382 /* Cloud2.png */; };
 		05E7304619031DF10091D382 /* Cloud1.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E7304319031DF10091D382 /* Cloud1.png */; };
@@ -63,6 +64,7 @@
 		05DEC4CB1904FBF600BC7E9B /* coreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreData.xcdatamodel; sourceTree = "<group>"; };
 		05DEC4CD1905137200BC7E9B /* SavedTracksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavedTracksViewController.h; path = GhostRunner/SavedTracksViewController.h; sourceTree = "<group>"; };
 		05DEC4CE1905137200BC7E9B /* SavedTracksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SavedTracksViewController.m; path = GhostRunner/SavedTracksViewController.m; sourceTree = "<group>"; };
+		05DEC4D0190549B000BC7E9B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		05E7304119031DF10091D382 /* Cloud3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cloud3.png; path = "../../Archer Fish/SpriteSheetsItems/Clouds/Cloud3.png"; sourceTree = "<group>"; };
 		05E7304219031DF10091D382 /* Cloud2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cloud2.png; path = "../../Archer Fish/SpriteSheetsItems/Clouds/Cloud2.png"; sourceTree = "<group>"; };
 		05E7304319031DF10091D382 /* Cloud1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cloud1.png; path = "../../Archer Fish/SpriteSheetsItems/Clouds/Cloud1.png"; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05DEC4D1190549B000BC7E9B /* CoreData.framework in Frameworks */,
 				055D31AD19041ECF004EFE15 /* QuartzCore.framework in Frameworks */,
 				05F55ADC1901D610001E01FA /* CoreLocation.framework in Frameworks */,
 				05F55A86190134FD001E01FA /* MapKit.framework in Frameworks */,
@@ -161,6 +164,7 @@
 		05F55A4F190133FF001E01FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05DEC4D0190549B000BC7E9B /* CoreData.framework */,
 				055D31AC19041ECF004EFE15 /* QuartzCore.framework */,
 				05F55ADB1901D610001E01FA /* CoreLocation.framework */,
 				05F55A85190134FD001E01FA /* MapKit.framework */,
